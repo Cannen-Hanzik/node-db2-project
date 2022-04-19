@@ -9,7 +9,7 @@ const sharedConfig = {
     directory: './data/seeds',
   },
   pool: {
-    afterCreate: (conn, done) => {
+    afterCreate: (conn, done) => { // SQLite
       conn.run('PRAGMA foreign_keys = ON', done)
     },
   },
