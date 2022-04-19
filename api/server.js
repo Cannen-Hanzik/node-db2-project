@@ -7,7 +7,7 @@ server.use(express.json());
 server.use('*', (req, res, next) => {
     next({
         status: 404, 
-        message: 'not found' 
+        message: 'not found!' 
     })
 })
 
@@ -16,4 +16,5 @@ server.use((err, req, res, next) => { // eslint-disable-line
         message: err.message
     })
 })
+
 module.exports = server
